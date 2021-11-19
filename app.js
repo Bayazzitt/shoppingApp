@@ -56,22 +56,22 @@ class UI{
         itemCount.innerHTML = cartListItem.length
     }
 
-    cartToggle() {  //sepetin çalışmasını sağlıyoruz
+    cartToggle() {
         btnCart.addEventListener("click", function(){
             cartList.classList.toggle("d-none")
         })
     }
 }
 
-for (let i = 0; i < card.length; i++) {    //for ilehangi butona tıkladığımızı buluyoruz
-    btnAdd[i].addEventListener("click", function(e){  //hangi butona tıklarsak bunu yazdır
+for (let i = 0; i < card.length; i++) {
+    btnAdd[i].addEventListener("click", function(e){  
         let title = card[i].getElementsByClassName("card-title")[0].textContent
         let price = card[i].getElementsByClassName("price")[0].textContent
         let image = card[i].getElementsByClassName("card-img-top")[0].src
-        btnAdd[i].classList.add("disabled") //2. kez vasmayı engelledik
-        btnAdd[i].textContent = "In Card" //karta eklendi
+        btnAdd[i].classList.add("disabled") 
+        btnAdd[i].textContent = "In Card"
 
-        let shopping = new Shopping(title,price,image) //new Shopping içerisine gönderip shopping değişkenine attık artık constructor içerisindekilere bu değişken ile ulaşabiliriz
+        let shopping = new Shopping(title,price,image) 
         let ui = new UI()
 
         ui.addtoCart(shopping)
@@ -79,7 +79,7 @@ for (let i = 0; i < card.length; i++) {    //for ilehangi butona tıkladığım�
         ui.cartCount()
 
 
-        e.preventDefault()  //linke gitmesini engelledik
+        e.preventDefault()  
     })
 }
 
