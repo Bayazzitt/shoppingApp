@@ -4,7 +4,7 @@
 
 <br>
 
-> ### Proje Link 📎 → 
+> ### Proje Link 📎 → https://pensive-cori-2ebb82.netlify.app
 
 <br>
 
